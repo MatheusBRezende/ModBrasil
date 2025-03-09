@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " #W"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "#": {
+      "item": "minecraft:glass_bottle"
+    }
+  },
+  "result": {
+    "item": "tutorialmod:cerveja",
+    "count": 1
+  },
+  "show_notification": true
+}
