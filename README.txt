@@ -60,5 +60,6 @@ Bem-vindo ao **Brasil RL Mod**, um mod para Minecraft que traz a cultura, comida
 Aqui estão algumas imagens do mod em ação:
 
 
-![Cerveja](screenshots/Captura de tela de 2025-03-10 12-00-24.png)
+
+![Image](https://github.com/user-attachments/assets/305783b2-0270-4b94-a09c-36296e6f172d)
 
