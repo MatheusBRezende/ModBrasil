@@ -37,7 +37,9 @@ public class ModItems {
     public static final RegistryObject<Item> DINHEIRO_200 = ITEMS.register("dinheiro200",
             () -> new Item(new Item.Properties()));
 
-
+    //Itens Refri
+    public static final  RegistryObject<Item> REFRIGERANTE = ITEMS.register("refri",
+            () -> new Item(new Item.Properties()));
 
     // Registra todos os itens
     public static void register(IEventBus eventBus) {
