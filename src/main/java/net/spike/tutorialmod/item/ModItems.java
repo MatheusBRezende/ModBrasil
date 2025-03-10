@@ -39,7 +39,7 @@ public class ModItems {
 
     //Itens Refri
     public static final  RegistryObject<Item> REFRIGERANTE = ITEMS.register("refri",
-            () -> new Item(new Item.Properties()));
+            () -> new RefriItem(new Item.Properties()));
 
     // Registra todos os itens
     public static void register(IEventBus eventBus) {

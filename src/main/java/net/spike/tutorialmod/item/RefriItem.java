@@ -31,8 +31,8 @@ public class RefriItem extends Item {
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
         // Aplica o efeito de náusea e fraqueza ao consumir o item
-        entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 300, 0));
-        entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 0));
+        entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 300, 0));
+        entity.addEffect(new MobEffectInstance(MobEffects.DIG_SPEED, 300, 0));
 
         // Retorna a garrafa de vidro após o uso
         if (entity instanceof Player) {
