@@ -1,1 +1,12 @@
-![Screenshot do mod](screenshots/Captura de tela de 2025-03-10 12-00-24.png)
+# Meu Mod Incrível
+
+Este é um mod incrível que adiciona cervejas ao Minecraft!
+
+## Screenshots
+
+![Cerveja no inventário](images/cerveja_inventario.png)
+![Efeitos da cerveja](images/efeitos_cerveja.png)
+
+## Como usar
+- Beba a cerveja para obter efeitos especiais!
+- Uma garrafa de vidro será dropada após o consumo.
