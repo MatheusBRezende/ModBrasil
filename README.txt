@@ -58,9 +58,4 @@ Bem-vindo ao **Brasil RL Mod**, um mod para Minecraft que traz a cultura, comida
 ## **Capturas de Tela**
 
 Aqui estão algumas imagens do mod em ação:
-
-![Image](https://github.com/user-attachments/assets/579bb3db-1268-4bba-a4c0-a278c19cfb04)
-
-<div align="center">
-<img src="https://github.com/user-attachments/assets/579bb3db-1268-4bba-a4c0-a278c19cfb04" width="720px"/>
-</div>
+![image alt](https://github.com/MatheusBRezende/ModBrasil/blob/40fb3a340f43608741d44be83cadf10bd269d122/Captura%20de%20tela%20de%202025-03-10%2012-00-50.png)
