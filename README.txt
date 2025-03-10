@@ -4,7 +4,7 @@ Este é um mod incrível que adiciona cervejas ao Minecraft!
 
 ## Screenshots
 
-![Descrição da imagem](https://raw.githubusercontent.com/MatheusBRezende/ModBrasil/master/screenshots/cerveja.png)
+![Descrição da imagem](https://github.com/MatheusBRezende/ModBrasil/blob/master/screenshots/cerveja.png)
 
 
 
