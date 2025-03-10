@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "tutorialmod:item/corpo_refri",
-		"1": "tutorialmod:item/tampa_refri",
-		"2": "tutorialmod:item/abridor_refri",
-		"particle": "tutorialmod:item/corpo_refri"
+		"0": "block/corpo_refri",
+		"1": "block/tampa_refri",
+		"2": "block/abridor_refri",
+		"particle": "block/corpo_refri"
 	},
 	"elements": [
 		{
