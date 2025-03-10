@@ -17,6 +17,7 @@ public class ModCreativeModTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DINHEIRO_1.get()))
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.CERVEJA.get());
                         output.accept(ModItems.DINHEIRO_1.get());
                         output.accept(ModItems.DINHEIRO_2.get());
                         output.accept(ModItems.DINHEIRO_5.get());
@@ -25,7 +26,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.DINHEIRO_50.get());
                         output.accept(ModItems.DINHEIRO_100.get());
                         output.accept(ModItems.DINHEIRO_200.get());
-                        output.accept(ModItems.CERVEJA.get()); // Adiciona a cerveja à aba criativa
+
                     })
                     .build());
 

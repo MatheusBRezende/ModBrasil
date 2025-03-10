@@ -17,16 +17,16 @@ public class ModItems {
         ITEMS.register(eventBus);
     }
 
-    // Definição da cerveja como um item consumível
     public static final RegistryObject<Item> CERVEJA = ITEMS.register("cerveja",
             () -> new CervejaItem(new Item.Properties()
+                    .durability(10) // 10 usos
                     .food(new FoodProperties.Builder()
                             .nutrition(2) // Valor nutricional
                             .saturationMod(0.6F) // Modificador de saturação
                             .alwaysEat() // Permite comer mesmo com a barra de fome cheia
                             .build())));
 
-    // Outros itens (dinheiro) permanecem inalterados
+    // Itens de dinheiro (exemplo)
     public static final RegistryObject<Item> DINHEIRO_1 = ITEMS.register("dinheiro1",
             () -> new Item(new Item.Properties()));
 

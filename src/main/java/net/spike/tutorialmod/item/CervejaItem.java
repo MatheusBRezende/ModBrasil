@@ -5,6 +5,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -13,7 +14,8 @@ import net.minecraft.world.level.Level;
 public class CervejaItem extends Item {
 
     public CervejaItem(Properties properties) {
-        super(properties);
+        // Define a durabilidade do item (10 usos)
+        super(properties.durability(10));
     }
 
     @Override
@@ -25,12 +27,25 @@ public class CervejaItem extends Item {
 
             // Reproduz o som de beber uma poção
             world.playSound(null, entity.getX(), entity.getY(), entity.getZ(),
-                    SoundEvents.GENERIC_DRINK, SoundSource.NEUTRAL, 0.5F, 1.0F);
+                    SoundEvents.GENERIC_DRINK, SoundSource.NEUTRAL, 0.5F, world.getRandom().nextFloat() * 0.1F + 0.9F);
 
-            // Dropa uma garrafa de vidro no local da entidade
-            entity.spawnAtLocation(new ItemStack(Items.GLASS_BOTTLE));
+            // Verifica se o item quebrou após o uso
+            if (stack.hurt(1, world.getRandom(), null)) {
+                // Se o item quebrou, adiciona uma garrafa de vidro ao inventário do jogador
+                if (entity instanceof Player) {
+                    Player player = (Player) entity;
+                    player.getInventory().add(new ItemStack(Items.GLASS_BOTTLE));
+                }
+                // Remove o item do inventário
+                stack.shrink(1);
+            }
         }
 
-        return super.finishUsingItem(stack, world, entity);
+        return stack;
+    }
+
+    @Override
+    public boolean isRepairable(ItemStack stack) {
+        return false; // Impede que o item seja reparado
     }
 }
