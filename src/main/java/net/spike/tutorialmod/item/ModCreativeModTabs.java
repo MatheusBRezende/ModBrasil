@@ -9,14 +9,12 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.spike.tutorialmod.TutorialMod;
 
-
-public class ModCreativeModTabs{
+public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MODID);
 
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("tutorial_tab",
-            () -> CreativeModeTab.builder(). icon(()-> new ItemStack(ModItems.DINHEIRO_1.get()))
-
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.DINHEIRO_1.get()))
                     .title(Component.translatable("creativetab.tutorial_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.DINHEIRO_1.get());
@@ -27,10 +25,11 @@ public class ModCreativeModTabs{
                         output.accept(ModItems.DINHEIRO_50.get());
                         output.accept(ModItems.DINHEIRO_100.get());
                         output.accept(ModItems.DINHEIRO_200.get());
+                        output.accept(ModItems.CERVEJA.get()); // Adiciona a cerveja à aba criativa
                     })
                     .build());
 
-    public static void register(IEventBus eventBus){
+    public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);
     }
 }

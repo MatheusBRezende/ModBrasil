@@ -1,5 +1,6 @@
 package net.spike.tutorialmod.item;
 
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,10 +13,20 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MODID);
 
-
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
+
+    // Definição da cerveja como um item consumível
+    public static final RegistryObject<Item> CERVEJA = ITEMS.register("cerveja",
+            () -> new CervejaItem(new Item.Properties()
+                    .food(new FoodProperties.Builder()
+                            .nutrition(2) // Valor nutricional
+                            .saturationMod(0.6F) // Modificador de saturação
+                            .alwaysEat() // Permite comer mesmo com a barra de fome cheia
+                            .build())));
+
+    // Outros itens (dinheiro) permanecem inalterados
     public static final RegistryObject<Item> DINHEIRO_1 = ITEMS.register("dinheiro1",
             () -> new Item(new Item.Properties()));
 
