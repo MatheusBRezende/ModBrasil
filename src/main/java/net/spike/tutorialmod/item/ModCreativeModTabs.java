@@ -32,7 +32,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.DINHEIRO_200.get());
                         output.accept(ModItems.CEVADA_SEEDS.get());
 
-                        output.accept(ModBlocks.THING.get());
+                        output.accept(ModBlocks.THING_BLOCK.get());
                         output.accept(ModBlocks.SOUND_BLOCK.get());
                     })
                     .build());
