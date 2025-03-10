@@ -11,52 +11,38 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.spike.tutorialmod.item.ModCreativeModTabs;
 import net.spike.tutorialmod.item.ModItems;
 
-
-
-// The value here should match an entry in the META-INF/mods.toml file
 @Mod(TutorialMod.MODID)
-public class TutorialMod
-{
-    // Define mod id in a common place for everything to reference
+public class TutorialMod {
     public static final String MODID = "tutorialmod";
-    // Directly reference a slf4j logger
-    public TutorialMod(FMLJavaModLoadingContext context)
-    {
+
+    public TutorialMod(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
+
+        // Registra as abas criativas
         ModCreativeModTabs.register(modEventBus);
-        ModItems.register(modEventBus); // Registra os items
-        modEventBus.addListener(ClientModEvents::onClientSetup);
 
+        // Registra os itens
+        ModItems.register(modEventBus);
 
+        // Configurações comuns
         modEventBus.addListener(this::commonSetup);
 
+        // Configurações do cliente
+        modEventBus.addListener(ClientModEvents::onClientSetup);
 
-        // Register ourselves for server and other game events we are interested in
+        // Registra eventos do Forge
         MinecraftForge.EVENT_BUS.register(this);
-
-        // Register the item to a creative tab
-
-        // Register our mod's ForgeConfigSpec so that Forge can create and load the config file for us
-
     }
 
-    private void commonSetup(final FMLCommonSetupEvent event)
-    {
+    private void commonSetup(final FMLCommonSetupEvent event) {
+        // Configurações iniciais comuns
     }
 
-    // Add the example block item to the building blocks tab
-
-
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
-
-
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            // Configurações específicas do cliente
         }
     }
 }
