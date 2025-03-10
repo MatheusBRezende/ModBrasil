@@ -4,7 +4,8 @@ Este é um mod incrível que adiciona cervejas ao Minecraft!
 
 ## Screenshots
 
-![Cerveja no inventário](screenshots/https:/cerveja.png)
+![Minha Imagem](screenshots/dinheiro1.png)
+
 
 ## Como usar
 - Beba a cerveja para obter efeitos especiais!
