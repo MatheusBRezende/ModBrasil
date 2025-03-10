@@ -24,6 +24,9 @@ public class TutorialMod {
         // Registra os itens
         ModItems.register(modEventBus);
 
+        // Registra os blocks
+        ModBlocks.register(modEventBus);
+
         // Configurações comuns
         modEventBus.addListener(this::commonSetup);
 
