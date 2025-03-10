@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.spike.tutorialmod.block.ModBlocks;
 import net.spike.tutorialmod.item.ModCreativeModTabs;
 import net.spike.tutorialmod.item.ModItems;
 
@@ -35,6 +36,8 @@ public class TutorialMod {
 
         // Registra eventos do Forge
         MinecraftForge.EVENT_BUS.register(this);
+
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {

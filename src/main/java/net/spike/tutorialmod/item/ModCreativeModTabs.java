@@ -8,6 +8,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 import net.spike.tutorialmod.TutorialMod;
+import net.spike.tutorialmod.block.ModBlocks;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
@@ -29,6 +30,10 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.DINHEIRO_50.get());
                         output.accept(ModItems.DINHEIRO_100.get());
                         output.accept(ModItems.DINHEIRO_200.get());
+                        output.accept(ModItems.CEVADA_SEEDS.get());
+
+                        output.accept(ModBlocks.THING.get());
+                        output.accept(ModBlocks.SOUND_BLOCK.get());
                     })
                     .build());
 
