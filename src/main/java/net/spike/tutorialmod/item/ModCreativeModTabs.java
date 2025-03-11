@@ -12,7 +12,7 @@ import net.spike.tutorialmod.block.ModBlocks;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MODID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
 
     // Aba criativa do mod
     public static final RegistryObject<CreativeModeTab> TUTORIAL_TAB = CREATIVE_MODE_TABS.register("brasilrl",
@@ -30,12 +30,9 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.DINHEIRO_50.get());
                         output.accept(ModItems.DINHEIRO_100.get());
                         output.accept(ModItems.DINHEIRO_200.get());
-                        output.accept(ModItems.CEVADA_SEEDS.get());
                         output.accept(ModItems.REFRIGERANTE.get());
 
-                        output.accept(ModBlocks.THING_BLOCK.get());
-                        output.accept(ModBlocks.ASFALTO_BLOCK.get());
-                        output.accept(ModBlocks.SOUND_BLOCK.get());
+                        output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                     })
                     .build());
 

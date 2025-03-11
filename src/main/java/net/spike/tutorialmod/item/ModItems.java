@@ -11,13 +11,11 @@ import net.spike.tutorialmod.block.ModBlocks;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
-            DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MODID);
+            DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
     // Itens de cerveja
     public static final RegistryObject<Item> CERVEJA = ITEMS.register("cerveja",
             () -> new CervejaItem(new Item.Properties()));
-    public static final RegistryObject<Item> CEVADA_SEEDS = ITEMS.register("cevada_seeds",
-            () -> new ItemNameBlockItem(ModBlocks.CEVADA_BLOCK.get(), new Item.Properties()));
 
     // Itens de dinheiro
     public static final RegistryObject<Item> DINHEIRO_1 = ITEMS.register("dinheiro1",

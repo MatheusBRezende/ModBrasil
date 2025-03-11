@@ -11,30 +11,18 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.spike.tutorialmod.TutorialMod;
-import net.spike.tutorialmod.block.custom.CevadaCropBlock;
-import net.spike.tutorialmod.block.custom.SoundBlock;
 import net.spike.tutorialmod.item.ModItems;
 
 import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MODID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, TutorialMod.MOD_ID);
 
 
 
-    public static final RegistryObject<Block> THING_BLOCK = registerBlock("thing_block",
+    public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
-
-    public static final RegistryObject<Block> ASFALTO_BLOCK = registerBlock("asfalto_block",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
-    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
-            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-
-    public static final RegistryObject<Block> CEVADA_BLOCK = BLOCKS.register("cevada_crop",
-            () -> new CevadaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
-
 
 
     public static <T extends  Block> RegistryObject<T> registerBlock(String name, Supplier<T> block){
