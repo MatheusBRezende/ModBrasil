@@ -34,6 +34,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.REFRIGERANTE.get());
 
                         output.accept(ModBlocks.THING_BLOCK.get());
+                        output.accept(ModBlocks.ASFALTO_BLOCK.get());
                         output.accept(ModBlocks.SOUND_BLOCK.get());
                     })
                     .build());

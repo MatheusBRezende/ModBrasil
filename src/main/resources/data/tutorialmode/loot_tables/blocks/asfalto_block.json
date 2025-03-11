@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "tutorialmod:thing"
+          "name": "tutorialmod:asfalto_block"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "tutorialmod: blocks/thing"
+  "random_sequence": "tutorialmod:blocks/asfalto_block"
 }

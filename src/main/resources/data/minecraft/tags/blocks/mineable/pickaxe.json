@@ -1,5 +1,6 @@
 {
   "values": [
-    "tutorialmod: thing"
+    "tutorialmod:thing_block",
+    "tutorialmod:asfalto_block"
   ]
 }
