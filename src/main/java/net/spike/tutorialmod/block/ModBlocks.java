@@ -21,7 +21,7 @@ public class ModBlocks {
 
 
 
-    public static final RegistryObject<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block",
+    public static final RegistryObject<Block> AZULEJO_BRASIL = registerBlock("azulejo_brasil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.AMETHYST)));
 
 

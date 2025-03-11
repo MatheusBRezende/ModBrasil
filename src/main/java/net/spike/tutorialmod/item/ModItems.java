@@ -1,13 +1,13 @@
 package net.spike.tutorialmod.item;
 
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
+
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.spike.tutorialmod.TutorialMod;
-import net.spike.tutorialmod.block.ModBlocks;
+
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -31,8 +31,6 @@ public class ModItems {
     public static final RegistryObject<Item> DINHEIRO_50 = ITEMS.register("dinheiro50",
             () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> DINHEIRO_100 = ITEMS.register("dinheiro100",
-            () -> new Item(new Item.Properties()));
-    public static final RegistryObject<Item> DINHEIRO_200 = ITEMS.register("dinheiro200",
             () -> new Item(new Item.Properties()));
 
     //Itens Refri

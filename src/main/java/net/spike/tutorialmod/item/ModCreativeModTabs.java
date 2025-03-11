@@ -29,10 +29,9 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.DINHEIRO_20.get());
                         output.accept(ModItems.DINHEIRO_50.get());
                         output.accept(ModItems.DINHEIRO_100.get());
-                        output.accept(ModItems.DINHEIRO_200.get());
                         output.accept(ModItems.REFRIGERANTE.get());
 
-                        output.accept(ModBlocks.SAPPHIRE_BLOCK.get());
+                        output.accept(ModBlocks.AZULEJO_BRASIL.get());
                     })
                     .build());
 
