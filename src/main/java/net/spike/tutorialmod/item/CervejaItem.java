@@ -1,7 +1,6 @@
 package net.spike.tutorialmod.item;
 
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
@@ -17,10 +16,14 @@ import net.minecraft.sounds.SoundEvents;
 
 public class CervejaItem extends Item {
 
+    // Durabilidade máxima do item
+    private static final int MAX_DURABILITY = 3;
+
     public CervejaItem(Properties properties) {
         // Define as propriedades do item para ser consumível, como uma poção ou comida
         super(properties.craftRemainder(net.minecraft.world.item.Items.GLASS_BOTTLE) // Define o item que sobra após o uso (garrafa de vidro)
                 .stacksTo(16) // Define o tamanho máximo da pilha
+                .durability(MAX_DURABILITY) // Define a durabilidade máxima
                 .food(new FoodProperties.Builder()// Define propriedades de comida (necessário para o som e animação)
                         .nutrition(0) // Valor nutricional (0 para não restaurar fome)
                         .saturationMod(0) // Modificador de saturação
@@ -34,11 +37,15 @@ public class CervejaItem extends Item {
         entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 300, 0));
         entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 0));
 
-        // Retorna a garrafa de vidro após o uso
+        // Reduz a durabilidade do item
         if (entity instanceof Player) {
             Player player = (Player) entity;
             if (!player.getAbilities().instabuild) {
-                stack.shrink(1); // Reduz o tamanho da pilha
+                if (stack.getDamageValue() < stack.getMaxDamage()) {
+                    stack.setDamageValue(stack.getDamageValue() + 1); // Reduz a durabilidade
+                } else {
+                    stack.shrink(1); // Consome o item se a durabilidade chegar a zero
+                }
                 player.addItem(new ItemStack(net.minecraft.world.item.Items.GLASS_BOTTLE)); // Adiciona uma garrafa de vidro ao inventário
             }
         }
