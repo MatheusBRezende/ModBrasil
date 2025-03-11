@@ -41,12 +41,13 @@ public class CervejaItem extends Item {
         if (entity instanceof Player) {
             Player player = (Player) entity;
             if (!player.getAbilities().instabuild) {
-                if (stack.getDamageValue() < stack.getMaxDamage()) {
+                if (stack.getDamageValue() < stack.getMaxDamage() - 1) {
                     stack.setDamageValue(stack.getDamageValue() + 1); // Reduz a durabilidade
                 } else {
-                    stack.shrink(1); // Consome o item se a durabilidade chegar a zero
+                    // Adiciona a garrafa de vidro ao inventário quando o item quebra
+                    player.addItem(new ItemStack(net.minecraft.world.item.Items.GLASS_BOTTLE));
+                    stack.shrink(1); // Consome o item completamente
                 }
-                player.addItem(new ItemStack(net.minecraft.world.item.Items.GLASS_BOTTLE)); // Adiciona uma garrafa de vidro ao inventário
             }
         }
 

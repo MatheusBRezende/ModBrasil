@@ -6,7 +6,7 @@
   ],
   "key": {
     "W": {
-      "item": "minecraft:wheat"
+      "item": "minecraft:sugar"
     },
     "#": {
       "item": "minecraft:potion",
@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "tutorialmod:cerveja",
+    "item": "tutorialmod:refri",
     "count": 1
   },
   "show_notification": true
