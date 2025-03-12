@@ -24,7 +24,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> AZULEJO_BRASIL = registerBlock("azulejo_brasil",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)
                     .sound(SoundType.AMETHYST)
-                    .strength(5.0f, 6.0f) // Define a dureza e resistência do bloco
+                    .strength(2.5f, 6.0f) // Define a dureza e resistência do bloco
 
             ));
 
