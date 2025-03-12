@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " #W"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:wheat"
+    },
+    "#": {
+      "item": "minecraft:potion",
+      "nbt": "{Potion:\"minecraft:water\"}"
+    }
+  },
+  "result": {
+    "item": "brasilrl:cerveja",
+    "count": 1
+  },
+  "show_notification": true
+}

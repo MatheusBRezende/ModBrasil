@@ -6,7 +6,7 @@ issueTrackerURL="https://github.com/seu-usuario/seu-mod/issues" # URL para repor
 
 # Lista de mods (pode ter mais de um)
 [[mods]]
-modId="tutorialmod" # O ID do mod (deve corresponder ao MODID no código) (obrigatório)
+modId="brasilrl" # O ID do mod (deve corresponder ao MODID no código) (obrigatório)
 version="1.0.0" # Versão do mod (obrigatório)
 displayName="Tutorial Mod" # Nome exibido no menu de mods (obrigatório)
 authors="SeuNome" # Autores do mod (opcional)
@@ -15,14 +15,14 @@ Um mod de exemplo para o Minecraft.
 ''' # Descrição do mod (obrigatório)
 
 # Dependências do mod
-[[dependencies.tutorialmod]]
+[[dependencies.brasilrl]]
 modId="forge" # Dependência do Forge (obrigatório)
 mandatory=true # A dependência é obrigatória (obrigatório)
 versionRange="[47,)" # Versão do Forge necessária (obrigatório)
 ordering="NONE" # Ordem de carregamento (opcional)
 side="BOTH" # Lado em que o mod é carregado (CLIENT, SERVER ou BOTH) (opcional)
 
-[[dependencies.tutorialmod]]
+[[dependencies.brasilrl]]
 modId="minecraft" # Dependência do Minecraft (obrigatório)
 mandatory=true # A dependência é obrigatória (obrigatório)
 versionRange="[1.20.1]" # Versão do Minecraft necessária (obrigatório)
